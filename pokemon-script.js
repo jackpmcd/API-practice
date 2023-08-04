@@ -1,8 +1,9 @@
 const baseUrl = "https://pokeapi.co/api/v2";
 
-fetch(`${baseUrl}/pokemon-species/magikarp`)
+fetch(`${baseUrl}/pokemon-species/`)
 .then(response => response.json())
     .then(speciesData => {
+        console.log(speciesData);
         const pokemonName = speciesData.name;
         const pokemonNameElement = document.getElementById("pokemonName");
         pokemonNameElement.textContent = pokemonName;
