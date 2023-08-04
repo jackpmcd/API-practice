@@ -5,7 +5,7 @@ fetch("https://restcountries.com/v3.1/all?fields=name,population")
 
         data.forEach(country => {
             const countryName = country.name.common;
-            console.log(countryName);
+            //console.log(countryName);
             const listItem = document.createElement("li");
             const link = document.createElement("a");
 

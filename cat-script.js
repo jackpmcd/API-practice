@@ -18,13 +18,18 @@ fetch(apiUrl, {
 })
 .then(data => {
     let imageData = data[0];
-    let apiResponse = document.getElementById('apiResponse');
+    let catResponse = document.getElementById('catResponse');
 
     let image = document.createElement('img');
     image.src = imageData.url; 
 
-    apiResponse.appendChild(image);
-    console.log(imageData.url);
+    let imageInfo = document.createElement('p');
+    imageInfo.textContent = "The cat's ID - " + imageData.id;
+    
+    catResponse.appendChild(imageInfo);
+    catResponse.appendChild(image)
+    
+    console.log(imageData.id);
 })
 .catch(error => {
     console.error('Fetch error:', error);
